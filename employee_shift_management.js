@@ -70,7 +70,6 @@ function listAvailableEmployees(day) {
         }
     });
 }
-listAvailableEmployees("Monday");
-listAvailableEmployees("Tuesday");
-listAvailableEmployees("Friday");
-
+listAvailableEmployees("Monday"); // Output: Brianna Deaubler, Jesenia Chatman, and Jennifer Loza
+listAvailableEmployees("Tuesday"); // Output: Jesenia Chatman & Isabella Moore
+listAvailableEmployees("Friday"); // Output: Brianna Deaubler & Jesenia Chatman
