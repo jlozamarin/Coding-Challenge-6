@@ -38,7 +38,7 @@ let assignShift = function(name, day, hours) {
         console.log(`Error: ${name} schedule not available.`); // Gives an error message for shifts not found
         return;
     }
-    if (employee.shifts.some(s => shifts.day === day)) {
+    if (employee.shifts.some(workShift => workShift.day === day)) {
         console.log(`Error: ${name} is already on schedule for ${day}.`); // Gives an error message for individuals with existing shifts
         return;
     }
