@@ -58,7 +58,19 @@ function calculateTotalHours(name) {
     let totalHours = employee.shifts.reduce((sum, workShift) => sum + workShift.hours, 0); // Calculates total amount of hours an employee worked during the week
     console.log(`${name} completed ${totalHours} hours during the week.`); 
 }
-calculateTotalHours("Jennifer Loza");
-calculateTotalHours("Isabella Moore");
+calculateTotalHours("Jennifer Loza"); // Output: Completed 14 hours during the week
+calculateTotalHours("Isabella Moore"); // Output: Completed 14 hours during the week
 
+// Task 5: Create a Function to List Employees with Free Days
+function listAvailableEmployees(day) {
+    console.log(`List of available employees on ${day}:`);
+    employees.forEach(employee => {
+        if (!employee.shifts.some(workShift => workShift.day === day)) {
+            console.log(employee.name);
+        }
+    });
+}
+listAvailableEmployees("Monday");
+listAvailableEmployees("Tuesday");
+listAvailableEmployees("Friday");
 
